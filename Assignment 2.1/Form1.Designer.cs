@@ -1,7 +1,7 @@
 ﻿
 namespace Assignment_2._1
 {
-    partial class Form1
+    partial class MotgageCalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@ namespace Assignment_2._1
         private void InitializeComponent()
         {
             this.lblInitPrincipal = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblMonPayment = new System.Windows.Forms.Label();
+            this.lblTerm = new System.Windows.Forms.Label();
             this.lblAnnualIntRate = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtInitPrincipal = new System.Windows.Forms.TextBox();
+            this.txtAnnualIntRate = new System.Windows.Forms.TextBox();
+            this.txtMonPayment = new System.Windows.Forms.TextBox();
+            this.txtTerm = new System.Windows.Forms.TextBox();
+            this.btnCalculate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblInitPrincipal
@@ -49,23 +49,23 @@ namespace Assignment_2._1
             this.lblInitPrincipal.TabIndex = 0;
             this.lblInitPrincipal.Text = "Initial Principal ($)";
             // 
-            // label2
+            // lblMonPayment
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 166);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.lblMonPayment.AutoSize = true;
+            this.lblMonPayment.Location = new System.Drawing.Point(21, 166);
+            this.lblMonPayment.Name = "lblMonPayment";
+            this.lblMonPayment.Size = new System.Drawing.Size(103, 13);
+            this.lblMonPayment.TabIndex = 1;
+            this.lblMonPayment.Text = "Monthly Payment ($)";
             // 
-            // label3
+            // lblTerm
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.lblTerm.AutoSize = true;
+            this.lblTerm.Location = new System.Drawing.Point(21, 77);
+            this.lblTerm.Name = "lblTerm";
+            this.lblTerm.Size = new System.Drawing.Size(67, 13);
+            this.lblTerm.TabIndex = 2;
+            this.lblTerm.Text = "Term (Years)";
             // 
             // lblAnnualIntRate
             // 
@@ -76,59 +76,63 @@ namespace Assignment_2._1
             this.lblAnnualIntRate.TabIndex = 3;
             this.lblAnnualIntRate.Text = "Annual Interest Rate (%)";
             // 
-            // textBox1
+            // txtInitPrincipal
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtInitPrincipal.Location = new System.Drawing.Point(157, 22);
+            this.txtInitPrincipal.Name = "txtInitPrincipal";
+            this.txtInitPrincipal.Size = new System.Drawing.Size(100, 20);
+            this.txtInitPrincipal.TabIndex = 4;
+            this.txtInitPrincipal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox2
+            // txtAnnualIntRate
             // 
-            this.textBox2.Location = new System.Drawing.Point(157, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtAnnualIntRate.Location = new System.Drawing.Point(157, 48);
+            this.txtAnnualIntRate.Name = "txtAnnualIntRate";
+            this.txtAnnualIntRate.Size = new System.Drawing.Size(100, 20);
+            this.txtAnnualIntRate.TabIndex = 5;
+            this.txtAnnualIntRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox3
+            // txtMonPayment
             // 
-            this.textBox3.Location = new System.Drawing.Point(157, 163);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtMonPayment.Location = new System.Drawing.Point(157, 163);
+            this.txtMonPayment.Name = "txtMonPayment";
+            this.txtMonPayment.Size = new System.Drawing.Size(100, 20);
+            this.txtMonPayment.TabIndex = 6;
+            this.txtMonPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox4
+            // txtTerm
             // 
-            this.textBox4.Location = new System.Drawing.Point(157, 74);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtTerm.Location = new System.Drawing.Point(157, 74);
+            this.txtTerm.Name = "txtTerm";
+            this.txtTerm.Size = new System.Drawing.Size(100, 20);
+            this.txtTerm.TabIndex = 7;
+            this.txtTerm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // button1
+            // btnCalculate
             // 
-            this.button1.Location = new System.Drawing.Point(106, 120);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCalculate.Location = new System.Drawing.Point(106, 120);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(75, 23);
+            this.btnCalculate.TabIndex = 8;
+            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // MotgageCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 348);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(305, 235);
+            this.Controls.Add(this.btnCalculate);
+            this.Controls.Add(this.txtTerm);
+            this.Controls.Add(this.txtMonPayment);
+            this.Controls.Add(this.txtAnnualIntRate);
+            this.Controls.Add(this.txtInitPrincipal);
             this.Controls.Add(this.lblAnnualIntRate);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTerm);
+            this.Controls.Add(this.lblMonPayment);
             this.Controls.Add(this.lblInitPrincipal);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MotgageCalculator";
+            this.Text = "Mortgage Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,14 +141,14 @@ namespace Assignment_2._1
         #endregion
 
         private System.Windows.Forms.Label lblInitPrincipal;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblMonPayment;
+        private System.Windows.Forms.Label lblTerm;
         private System.Windows.Forms.Label lblAnnualIntRate;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtInitPrincipal;
+        private System.Windows.Forms.TextBox txtAnnualIntRate;
+        private System.Windows.Forms.TextBox txtMonPayment;
+        private System.Windows.Forms.TextBox txtTerm;
+        private System.Windows.Forms.Button btnCalculate;
     }
 }
 
