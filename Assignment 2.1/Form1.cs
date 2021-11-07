@@ -16,5 +16,15 @@ namespace Assignment_2._1
         {
             InitializeComponent();
         }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            double dInitPrincipal = double.Parse(txtInitPrincipal.Text);
+            double dAnnualIntRate = double.Parse(txtAnnualIntRate.Text);
+            int iTerm = int.Parse(txtTerm.Text);
+
+            double dMonPayment = Calculate.MonPayment(dInitPrincipal, dAnnualIntRate, iTerm);
+            txtMonPayment.Text = dMonPayment.ToString("C2");
+        }
     }
 }

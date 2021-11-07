@@ -96,6 +96,7 @@ namespace Assignment_2._1
             // 
             this.txtMonPayment.Location = new System.Drawing.Point(157, 163);
             this.txtMonPayment.Name = "txtMonPayment";
+            this.txtMonPayment.ReadOnly = true;
             this.txtMonPayment.Size = new System.Drawing.Size(100, 20);
             this.txtMonPayment.TabIndex = 6;
             this.txtMonPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -116,6 +117,7 @@ namespace Assignment_2._1
             this.btnCalculate.TabIndex = 8;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // MotgageCalculator
             // 
